@@ -1,0 +1,9 @@
+sudo apt-get install -y mongodb-org
+mkdir data
+echo 'mongod --bind_ip=$IP --dbpath=data --nojournal --rest "$@"' > mongod
+chmod a+x mongod
+./mongod (start mongo db server)
+
+npm install mongoose --save
+
+mongod --dbpath=data --repair
